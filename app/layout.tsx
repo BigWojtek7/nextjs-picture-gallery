@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -9,7 +10,6 @@ export const metadata: Metadata = {
   description: 'Piękna galeria zdjęć stworzona w Next.js z Tailwind CSS',
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -17,7 +17,33 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav className="bg-white shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 py-4">
+            <div className="flex justify-center space-x-8">
+              <Link
+                href="/"
+                className="text-gray-600 hover:text-purple-600 transition-colors"
+              >
+                Strona Główna
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-600 hover:text-purple-600 transition-colors"
+              >
+                O Nas
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-600 hover:text-purple-600 transition-colors"
+              >
+                Kontakt
+              </Link>
+            </div>
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
