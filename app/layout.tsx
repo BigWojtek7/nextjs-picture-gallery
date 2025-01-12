@@ -18,24 +18,24 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body className={inter.className}>
-        <nav className="bg-white shadow-sm">
+        <nav className="bg-fuchsia-400 shadow-sm">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <div className="flex justify-center space-x-8">
               <Link
                 href="/"
-                className="text-gray-600 hover:text-purple-600 transition-colors"
+                className="text-white hover:text-purple-600 transition-colors"
               >
                 Strona Główna
               </Link>
               <Link
                 href="/about"
-                className="text-gray-600 hover:text-purple-600 transition-colors"
+                className="text-white hover:text-purple-600 transition-colors"
               >
                 O Nas
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-600 hover:text-purple-600 transition-colors"
+                className="text-white hover:text-purple-600 transition-colors"
               >
                 Kontakt
               </Link>
